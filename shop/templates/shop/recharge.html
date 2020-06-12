@@ -1,0 +1,66 @@
+{% extends 'shop/basic.html' %}
+
+{% block title%} recharge - My Awesome Cart{% endblock %}
+{% block body %}
+<div class="container my-3">
+    <h3>Recharge</h3>
+    <form action="/shop/recharge/" method="post">{% csrf_token %}
+
+       <div class="form-group">
+    <label for="name">phone</label>
+    <input type="tel" class="form-control" id="phone" name='phone' placeholder="Enter Your Phone Number">
+  </div>
+
+  <div class="form-group">
+    <label for="operator">operator</label>
+    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+    <option selected>operator</option>
+    <option value="1">JIO</option>
+    <option value="2">IDEA</option>
+    <option value="3">AIRTEL</option>
+    <option value="3">AIRCEL</option>
+    <option value="3">BSNL</option>
+  </select>
+  </div>
+  <div class="col-md-3 mb-3">
+      <label for="validationTooltip04">State</label>
+      <input type="text" class="form-control" id="validationTooltip04" placeholder="State" required>
+      <div class="invalid-tooltip">
+        Please provide a valid state.
+      </div>
+    </div>
+    <div class="form-group">
+    <label for="name">Apply Promocode</label>
+    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+    <option selected>...... </option>
+    <option value="1">SAVE5</option>
+    <option value="2">SAVE10</option>
+    <option value="3">NEW5</option>
+  </div>
+
+ 
+
+
+ <form class="form-inline">
+  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Preference</label>
+  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+    <option selected></option>
+    <option value="1"></option>
+    <option value="2"></option>
+    <option value="3"></option>
+  </select>
+
+
+</form>
+        <button type="submit" class="btn btn-success">PAYMENT</button>
+</form>
+</div>
+
+<script>
+{% if thank %}
+alert('Thanks for using easy pay');
+localStorage.clear();
+document.location = "/shop";
+{% endif %}
+</script>
+{% endblock %}
