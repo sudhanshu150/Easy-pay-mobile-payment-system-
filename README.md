@@ -1,5 +1,5 @@
 # Easy-pay-mobile-payment-system-
-Mobile payment system is my collage project .For this project we use python django framework.
+Mobile payment system is my collage project .For this project I use python django framework.
 The Mobile payment system is an application to assist mobile phone users to access the
 informationof different bills, send and receive a request from almost anywhere, anytime
 
